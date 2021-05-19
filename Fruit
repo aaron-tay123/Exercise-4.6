@@ -1,0 +1,24 @@
+package Exercise4_6;
+
+public class Fruit {
+
+    private String name;
+	
+	public Fruit() { //constructor with no argument
+    	name = " ";
+    }
+	
+	public Fruit (String n) { //constructor with argument
+		name=n;
+		
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String toString() { //overriding method
+		return name +  " constructor is invoked";
+	}
+}
+
