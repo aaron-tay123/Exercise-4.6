@@ -1,0 +1,27 @@
+package Exercise4_6;
+
+	public class Orange extends Apple {
+
+		private String color;
+		
+		public Orange(String name, int q, double p, String c) { //constructor with argument
+			super(name, q, p);//called method in superclass with passing parameter
+			color=c;
+	    
+		   System.out.println("Orange constructor is invoked");
+		
+		}
+		public String Color() {
+			return this.color;
+		}
+		public String printInfo() {
+			return "Boosts your immune system, your body's defense against germs.";
+		}
+		
+		public String toString() { //overriding method
+			return  "Color : " + color
+			        +"\n" + printInfo();
+					
+		}
+
+	}
