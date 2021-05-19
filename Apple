@@ -1,0 +1,102 @@
+package Exercise4_6;
+
+public class Apple extends Fruit {
+
+	private double price;
+	private int quantity;
+
+	
+	public Apple(String name, int q, double p) { //constructor with argument
+		super(name);//called method in superclass with passing parameter
+		quantity = q;
+		price = p;
+		
+		//System.out.println("Apple constructor is invoked");
+		System.out.println(name);
+		
+	if(quantity < 10) { //if the quantity is less than 10
+	   System.out.println("Price per units : RM " + this.price);
+	   System.out.println("Quantity        : " + this.quantity + " units");
+	   System.out.println("If the quantity LESS than 10, there is no discount given.");
+	   System.out.println("Total Price     : RM " + this.price*this.quantity);
+  
+	}
+	else if (quantity > 10 && quantity < 100) { //if the quantity is more than 10 but less than 100
+	    System.out.println("It will be a cheaper price");
+	       if(name=="Apple" || name=="RedApple" || name=="GreenApple") {
+		      double pp=2.80;
+		      Price tpa = new AppleTotalPrice(); //create a new object for total price of apple
+		      double totalPrice = tpa.totalprice(q); //initialize the total price of apple
+		      System.out.println("Price per units : RM " + pp);
+		      System.out.println("Quantity        : " + q + " units");
+		      System.out.println("Total price: RM " + tpa.totalprice(q));
+	       }
+	       else if(name=="Banana") {
+	    	   double pp=3.50;
+	    	   Price tpb = new BananaTotalPrice(); //create a new object for total price of banana 
+	    	   double totalPrice = tpb.totalprice(q); //initialize the total price of banana
+	    	   System.out.println("Price per units : RM " + pp);
+	    	   System.out.println("Quantity        : " + q + " units");
+			   System.out.println("Total price: RM " + tpb.totalprice(q));
+	       }
+	       else { //if the name is orange
+	    	   double pp=2.80;
+	    	   Price tpo = new OrangeTotalPrice(); //create a new object for total price of banana 
+	    	   double totalPrice = tpo.totalprice(q); //initialize the total price of banana
+	    	   System.out.println("Price per units : RM " + pp);
+	    	   System.out.println("Quantity        : " + q + " units");
+			   System.out.println("Total price: RM " + tpo.totalprice(q));
+	       }
+	}
+	
+		else {
+			System.out.println("If the quantity is more than 100, it will be a cheaper price and get a discount.");
+		    
+		    if(name == "Apple" || name == "Red Apple" || name == "Green Apple") {
+		      rateofDiscount aa = new AppleDiscount(); //create new object
+		      double disc = aa.Discount();
+		      double pp=2.50;
+		      Price tpa = new AppleTotalPrice(); //create a new object for total price of apple
+		      double totalprice = tpa.totalprice(q, disc);
+		      System.out.println("Price per units : RM " + pp);
+	    	  System.out.println("Quantity        : " + q + " units");
+	    	  System.out.println("Discount        : " + disc);
+			  System.out.println("Total price: RM " + tpa.totalprice(q, disc));     
+		      }
+		    
+		    else if (name == "Banana") {
+			  rateofDiscount bb = new BananaDiscount(); //create new object
+			  double disc= bb.Discount();
+			  double pp=2.80;
+			  Price tpb = new AppleTotalPrice(); //create a new object for total price of apple
+		      double totalprice = tpb.totalprice(q, disc);
+		      System.out.println("Price per units : RM " + pp);
+	    	  System.out.println("Quantity        : " + q + " units");
+	    	  System.out.println("Discount        : " + disc);
+			  System.out.println("Total price: RM " + tpb.totalprice(q, disc));     
+		      }
+		
+		    else { // if the name is Orange
+			  rateofDiscount oo = new OrangeDiscount(); //create new object
+			  double disc= oo.Discount();
+		      double pp=2.50;
+		      Price tpo = new AppleTotalPrice(); //create a new object for total price of apple
+		      double totalprice = tpo.totalprice(q, disc);
+		      System.out.println("Price per units : RM " + pp);
+	    	  System.out.println("Quantity        : " + q + " units");
+	    	  System.out.println("Discount        : " + disc);
+			  System.out.println("Total price: RM " + tpo.totalprice(q, disc));     
+		      }
+		}
+	}
+
+
+      public String printInfo() {
+  		return "Apple is a type of fruit.";
+  	}
+  	
+  	public String toString() { //overriding method
+  		return super.toString()
+  				+ "\n" + printInfo();
+    }
+}
