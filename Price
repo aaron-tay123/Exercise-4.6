@@ -1,0 +1,8 @@
+package Exercise4_6;
+
+public interface Price {
+
+	double totalprice(int qq); //method with no body
+	
+	double totalprice( int qq, double disc); //method with no body
+}
