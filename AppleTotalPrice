@@ -1,0 +1,38 @@
+package Exercise4_6;
+
+ class AppleTotalPrice implements Price {
+
+	public double totalprice(int qq) { //same method in price
+
+		return 2.80*qq; //2.50 is the new price for apple
+		
+	}
+	
+	public double totalprice( int qq, double disc) { //same method in price
+		return(2.50*(1-disc))*qq; //2.50 is the new price for apple
+		
+	}
+}
+ 
+ class BananaTotalPrice implements Price {
+	 
+	 public double totalprice(int qq) { //same method in price
+		 return 3.50*qq; //3.50is the new price for banana
+	 }
+	 
+	 public double totalprice(int qq, double disc) {
+		 return (2.80*(1-disc))*qq; //2.80 is the new price for banana
+	 }
+ }
+ 
+ class OrangeTotalPrice implements Price {
+	 
+	 public double totalprice(int qq) { //same method in price
+		 return 2.80*qq; //2.80 is the new price for orange
+	 }
+	 
+	 public double totalprice(int qq, double disc) {
+		 return (2.50*(1-disc))*qq; //2.50 is the new price for orange
+	 }
+ }
+
