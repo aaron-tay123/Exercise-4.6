@@ -1,0 +1,24 @@
+package Exercise4_6;
+
+
+public class AppleDiscount implements rateofDiscount { //Apple discount is a sub class for interface rate of discount
+
+	public double Discount() { //same method as in rate of discount
+		return 0.25;
+	}
+}
+
+class BananaDiscount implements rateofDiscount {
+	
+	public double Discount() {
+		return 0.15;
+	}
+}
+
+class OrangeDiscount implements rateofDiscount {
+	
+	public double Discount() {
+		return 0.10;
+	}
+}
+
