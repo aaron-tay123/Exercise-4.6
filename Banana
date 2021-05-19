@@ -1,0 +1,30 @@
+package Exercise4_6;
+
+public class Banana extends Apple{
+
+	private char vitA;
+	private String size;
+	
+	public Banana(String name, int q, double p, char vA, String s) { //constructor with argument
+		super(name, q, p);//called method in superclass with passing parameter
+        vitA=vA;
+        size=s;
+		
+		//System.out.println("Banana constructor is invoked");
+	}	
+	public char VitA() {
+		return this.vitA;
+	}
+	public String Size() {
+		return this.size;
+	}
+	public String printInfo() {
+		return "Bananas Contain Nutrients That Moderate Blood Sugar Levels.";
+	}
+	public String toString() {
+		return "Does the banana has vitamin A (Y/N) : " + vitA
+				+"\nSize : " + size
+				+"\n" + printInfo();
+				
+	}
+}
