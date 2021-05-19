@@ -1,0 +1,7 @@
+package Exercise4_6;
+
+
+	public interface rateofDiscount {
+
+	    double Discount(); //method with no body
+	}
