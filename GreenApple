@@ -1,0 +1,32 @@
+package Exercise4_6;
+
+public class GreenApple extends Apple{
+	private String taste;
+	private boolean difference;
+	
+	public GreenApple(String name, int q, double p, String t, boolean dif) {
+		super(name, q, p);
+		this.taste = t;
+		this.difference = dif;
+		
+		//System.out.println("Green Apple constructor is invoked");
+	}
+	
+	public String tasteGreenApple() {
+		return this.taste;
+	}
+	
+	public boolean differ() {
+		return this.difference;
+		
+	}
+	public String printbenefit() {
+	return super.getName() + " will build resistance against inflections.";
+	}
+	
+	public String toString() {
+		return "Taste: " + taste
+		        + "\nIs the green apple has many vitamin A? : " + difference
+		        + "\n" + printbenefit();
+	}
+}
