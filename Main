@@ -1,0 +1,37 @@
+package Exercise4_6;
+
+public class Main {
+
+	public static void main(String[] args) {
+		 //Fruit f = new Fruit("Orange"); //no need new object for super class
+		
+		System.out.println();
+		
+		System.out.println("---------------Apple---------------");
+       Apple a = new Apple("Apple", 110, 2.99);
+		System.out.println(a);
+		System.out.println("");
+			
+		System.out.println("---------------Orange---------------");
+		Orange O = new Orange("Orange", 150, 5, "orange");
+		System.out.println(O);
+		System.out.println("");
+			
+		System.out.println("---------------GreenApple---------------");
+		GreenApple G = new GreenApple("Green Apple", 60, 2.99, "Good", true);
+		System.out.println(G);
+		System.out.println("");
+			
+		System.out.println("---------------Banana---------------");
+		Banana B = new Banana("Banana", 30, 3.99, 'Y', "Medium");
+		System.out.println(B);
+		System.out.println("");
+			
+		System.out.println("---------------RedApple---------------");
+		RedApple R = new RedApple("Red Apple", 50, 2.99, "Red");
+		System.out.println(R);
+		System.out.println("");
+
+   }
+
+}
